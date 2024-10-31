@@ -3,9 +3,9 @@ let randomNumber = Math.floor(Math.random() * 50) + 1;
  function checkGuess() { 
     const userGuess = parseInt(document.getElementById('guessInput').value);
     const message = document.getElementById('message');
-    if (isNaN(userGuess) || userGuess < 1 || userGuess > 50) { message.innerText = "Please enter a valid number between 1 and 50."; 
+ }
+if (isNaN(userGuess) || userGuess < 1 || userGuess > 50) { message.innerText = "Please enter a valid number between 1 and 50."; 
     return; 
-} 
 
 if (userGuess === randomNumber) { 
     message.innerText = "🎉 Correct! You found the candy count! 🎉";
@@ -29,4 +29,4 @@ function resetGame() {
           document.getElementById('guessInput').value = '';
            document.getElementById('message').innerText = '';
             document.getElementById('message').style.color = "#ff7518";
-         }
+}
